@@ -47,4 +47,5 @@ setup(
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
     platforms=["linux"],
+    description='Python wrapper for fast_obj C library for loading .obj files (https://github.com/thisistherk/fast_obj)',
 )
