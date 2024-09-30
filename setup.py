@@ -43,7 +43,7 @@ setup(
     name='pyobj',
     version='0.0.2',
     packages=['pyobj'],
-    ext_modules=[CMakeExtension('pyobj/fast_obj', sourcedir='lib/fast_obj')],
+    ext_modules=[CMakeExtension('pyobj/fast_obj', sourcedir='src/fast_obj')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
     platforms=["linux"],
