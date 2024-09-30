@@ -16,7 +16,7 @@ def __load_lib():
         raise NotImplementedError(error_message)
 
     module_path = Path(__file__).resolve().parent
-    so_path = module_path.joinpath("lib/libfast_obj_lib.so")
+    so_path = module_path.joinpath("libfast_obj_lib.so")
 
     return ctypes.CDLL(str(so_path))
 
