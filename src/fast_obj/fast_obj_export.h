@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include "fast_obj.h"
 
-int                    fast_obj_write(fastObjMesh* mesh, const char* path);
-
-int fast_obj_write(fastObjMesh *mesh, const char *path)
+int fast_obj_write(fastObjMesh* mesh, const char* path)
 {
     FILE *fout;
 
@@ -53,5 +51,4 @@ int fast_obj_write(fastObjMesh *mesh, const char *path)
     }
 
     fclose(fout);
-    
 }
