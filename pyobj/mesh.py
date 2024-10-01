@@ -7,6 +7,10 @@ class Mesh:
     def __init__(self, mesh_ptr: fastObjMesh_p) -> None:
         self.__fastObjMesh = mesh_ptr.contents
 
+    @property
+    def pointer(self) -> fastObjMesh_p:
+        return self.__fastObjMesh
+
     def __get_buffer(self, buf_name: str, count_name: str, buffer_dims: int = 1) -> np.ndarray:
         mesh = self.__fastObjMesh
         count = getattr(mesh, count_name)

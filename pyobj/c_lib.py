@@ -34,3 +34,8 @@ def __get_func(name: str, argtypes: Iterable[Type], restype: Type) -> Callable:
 def fast_obj_read(path: Union[str, Path]):
     f = __get_func("fast_obj_read", [ctypes.c_char_p], fastObjMesh_p)
     return f(bytes(str(path), 'ascii'))
+
+
+def fast_obj_write(mesh, path: Union[str, Path]):
+    f = __get_func("fast_obj_write", [fastObjMesh_p, ctypes.c_char_p], ctypes.c_int)
+    return f(mesh, bytes(str(path), 'ascii'))

@@ -8,4 +8,6 @@ mesh = pyobj.read(absolute_path)
 print(mesh.vertices, len(mesh.vertices))
 print(mesh.normals, len(mesh.normals))
 print(mesh.uvs, len(mesh.uvs))
-print(mesh.faces_idx)
+print(mesh.faces_idx, len(mesh.faces_idx))
+
+pyobj.write(mesh, Path(__file__).resolve().parent.joinpath("data/export.obj"))
