@@ -43,4 +43,4 @@ class Mesh:
     @property
     def faces_idx(self) -> np.ndarray:
         # face[i] = list of (vertex, uv, normal)
-        return self.__get_buffer("indices", "index_count", 3)
+        return self.__get_buffer("indices", "index_count", (3, 3))
